@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Project</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+
+    <div id="app">
+      <template v-for="(el, i) in ingredients">
+        <h3>{{el}}</h3>
+        <p>
+          {{i}}
+        </p>
+      </template>
+      <hr />
+      <ul>
+        <li v-for="person in people">
+          <div v-for="(n, k, i) in person">
+            {{k}}: {{n}} ({{i}})
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="app.js"></script>
+
+  </body>
+</html>
